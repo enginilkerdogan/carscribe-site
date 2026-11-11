@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CarScribe — Araç Bakım, Yakıt ve Evrak Takibi</title>
+<meta name="description" content="CarScribe: araç bakım, yakıt ve belge takibi. Akıllı hatırlatmalar, tamamen çevrimdışı, reklamsız premium seçeneği.">
+<link rel="icon" href="store-icon-512.png">
+<style>
+  :root{
+    --blue:#1565C0; --blue-dark:#0D47A1; --ink:#10233d; --muted:#5a6b82;
+    --bg:#f4f7fc; --card:#ffffff; --line:#e3e9f2;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{background:linear-gradient(135deg,var(--blue),var(--blue-dark));color:#fff;padding:56px 0 64px;text-align:center}
+  header img{width:112px;height:112px;border-radius:24px;box-shadow:0 12px 30px rgba(0,0,0,.25);margin-bottom:18px}
+  header h1{font-size:40px;margin:0 0 8px;letter-spacing:-.5px}
+  header p{font-size:19px;margin:0 auto;max-width:640px;opacity:.95}
+  .badges{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;background:#fff;color:var(--blue-dark);font-weight:700;padding:13px 24px;
+       border-radius:12px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);box-shadow:none}
+  section{padding:54px 0}
+  h2{font-size:27px;margin:0 0 22px;text-align:center}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .card h3{margin:0 0 8px;font-size:18px;color:var(--blue-dark)}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  .icon{font-size:26px;margin-bottom:8px}
+  .langbar{display:flex;gap:10px;justify-content:center;margin-top:20px}
+  .langbar a{color:#fff;text-decoration:none;font-size:14px;border-bottom:1px dashed rgba(255,255,255,.6)}
+  .note{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:12px;
+        padding:18px 22px;color:var(--muted)}
+  footer{background:#0d1b2e;color:#a9bad0;padding:30px 0;font-size:14px;text-align:center}
+  footer a{color:#8ab4f8}
+  .lang-en{display:none}
+  html[lang="en"] .lang-tr{display:none}
+  html[lang="en"] .lang-en{display:block}
+  html[lang="en"] .grid.lang-tr,html[lang="en"] h2.lang-tr,html[lang="en"] p.lang-tr,html[lang="en"] .note.lang-tr{display:none}
+  html[lang="en"] .grid.lang-en,html[lang="en"] h2.lang-en,html[lang="en"] p.lang-en,html[lang="en"] .note.lang-en{display:block}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="store-icon-512.png" alt="CarScribe">
+    <h1>CarScribe</h1>
+    <p class="lang-tr">Aracının bakım, yakıt ve belge takibi — çevrimdışı çalışan, akıllı hatırlatmalı günlük defterin.</p>
+    <p class="lang-en" style="display:none">Your offline pocket log for car maintenance, fuel and documents — with smart reminders.</p>
+    <div class="badges">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.enka.aractakip" rel="noopener">Google Play</a>
+      <a class="btn ghost" href="privacy.html">Gizlilik Politikası / Privacy</a>
+    </div>
+    <div class="langbar">
+      <a href="?lang=tr">Türkçe</a> · <a href="?lang=en">English</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2 class="lang-tr">Neler yapabilirsin?</h2>
+    <h2 class="lang-en" style="display:none">What can you do?</h2>
+    <div class="grid lang-tr">
+      <div class="card"><div class="icon">🚗</div><h3>Araçlar</h3><p>Plaka, marka, model ve model yılıyla araçlarını kaydet.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>Bakım kayıtları</h3><p>Tarih, kilometre, tutar ve notla her servisi tut; kategori bazlı takip et.</p></div>
+      <div class="card"><div class="icon">⛽</div><h3>Yakıt</h3><p>Litre, litre fiyatı ve ortalama tüketim; km başına maliyeti gör.</p></div>
+      <div class="card"><div class="icon">📄</div><h3>Belgeler</h3><p>Sigorta, muayene, kasko ve garanti bitiş tarihlerini kaçırma.</p></div>
+      <div class="card"><div class="icon">🔔</div><h3>Hatırlatmalar</h3><p>Servis ve belge tarihlerinden önce yerel bildirim al.</p></div>
+      <div class="card"><div class="icon">💾</div><h3>Yedekleme</h3><p>Tüm verini JSON dosyası olarak dışa aktar, istediğin zaman geri yükle.</p></div>
+    </div>
+    <div class="grid lang-en" style="display:none">
+      <div class="card"><div class="icon">🚗</div><h3>Vehicles</h3><p>Keep plate, brand, model and year for every car.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>Maintenance</h3><p>Log every service with date, odometer, cost and notes.</p></div>
+      <div class="card"><div class="icon">⛽</div><h3>Fuel</h3><p>Track liters, price per liter and average consumption.</p></div>
+      <div class="card"><div class="icon">📄</div><h3>Documents</h3><p>Never miss insurance, inspection or warranty expiry dates.</p></div>
+      <div class="card"><div class="icon">🔔</div><h3>Reminders</h3><p>Local notifications before service and document deadlines.</p></div>
+      <div class="card"><div class="icon">💾</div><h3>Backup</h3><p>Export everything to a JSON file and import it back anytime.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="note lang-tr">
+      <strong>Verilerin sende kalır.</strong> CarScribe hiçbir veriyi sunucuya göndermez; hesap açman gerekmez.
+      Ücretsiz sürümde AdMob reklamları gösterilir; tek seferlik Premium satın alımıyla reklamlar kaldırılır.
+      Ayrıntılar için <a href="privacy.html">gizlilik politikası</a>.
+    </div>
+    <div class="note lang-en" style="display:none">
+      <strong>Your data stays on your phone.</strong> CarScribe never sends your data to a server and needs no account.
+      The free version shows AdMob ads; a one-time Premium purchase removes them.
+      See the <a href="privacy-en.html">privacy policy</a> for details.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yil"></span> CarScribe · <a href="privacy.html">Gizlilik</a> · <a href="privacy-en.html">Privacy</a></div>
+    <div style="margin-top:8px"><a href="https://github.com/enginilkerdogan/aractakip">Kaynak / Source</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yil').textContent = new Date().getFullYear();
+  var p = new URLSearchParams(location.search);
+  if (p.get('lang') === 'en') document.documentElement.lang = 'en';
+</script>
+</body>
+</html>
